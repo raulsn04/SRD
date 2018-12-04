@@ -29,7 +29,7 @@ Se pretende obtener un conjunto de sitios web similares a los realizados en IIS,
 
 ![](imagen/4.PNG)
 
-         Comprobar acceso
+         Comprobar acceso.
 
 ![](imagen/5.PNG)
 
@@ -53,7 +53,7 @@ Se pretende obtener un conjunto de sitios web similares a los realizados en IIS,
 
 ![](imagen/10.PNG)
 
-          * Comprobamos la pagina.
+          * Comprobamos la pagína.
 
 ![](imagen/11.PNG)
 
@@ -67,4 +67,76 @@ Se pretende obtener un conjunto de sitios web similares a los realizados en IIS,
 
 ## Crear Hosts Virtuales en Apache, es decir, asociar carpetas con sitios web.
 
-Creamos empleados.miempresa.com --> /var/www/empleados
+        * Creamos empleados.miempresa.com --> /var/www/empleados.
+
+![](imagen/14.1.PNG)
+
+
+        * Configuramos los Hosts Virtuales.
+
+![](imagen/14.PNG)
+
+        * Activamos las pagínas.
+
+![](imagen/15.1.PNG)
+
+        * Comprobamos la pagína.
+
+![](imagen/15.PNG)
+
+
+## Configurar sitio web seguro pagos:
+
+    Al instalar Apache, se instala también SSL
+    Generar certificado autofirmado:
+      *  § openssl genrsa -des3 -out server.key 1024
+
+![](imagen/16.PNG)
+
+      *  § openssl rsa -in server.key -out server.pem
+
+![](imagen/17.PNG)
+
+      *  § openssl req -new -key server.key -out server.csr
+
+![](imagen/18.PNG)
+
+      *  § openssl x509 -req -days 360 -in server.csr -signkey server.key -out server.crt
+
+![](imagen/19.PNG)
+
+
+## Modificar /etc/apache2/sites-available/000-default.conf según indicaciones PDF para crear host virtual seguro.
+
+
+![](imagen/24.PNG)
+
+      * Creamos el host.
+
+![](imagen/26.PNG)
+
+      * Reiniciar el sitio.
+
+![](imagen/27.PNG)
+
+      * Comprobar el sitio.
+
+![](imagen/28.PNG)
+
+
+## Acceso a carpetas privadas
+
+
+    **Autenticación mediante .htaccess:**
+    * Estructura: empleados.miemepresa.com (acceso a todos los empleados pero no anónimos).
+    Creamos el directorio **claves** y el fichero **htpaswwd**
+
+![](imagen/21.PNG)
+
+    * Creamos los usuarios **Pepe y Arminda**.
+
+![](imagen/28.PNG)
+
+
+
+    * Subcarpetas personales de empleados (dos o tres, con acceso limitado al usuario)
