@@ -129,14 +129,76 @@ Se pretende obtener un conjunto de sitios web similares a los realizados en IIS,
 
     **Autenticación mediante .htaccess:**
     * Estructura: empleados.miemepresa.com (acceso a todos los empleados pero no anónimos).
-    Creamos el directorio **claves** y el fichero **htpaswwd**
+    * Creamos el directorio **claves** y el fichero **htpaswwd** con la configuración.
+
+![](imagen/20.0.PNG)
+
+![](imagen/20.PNG)
+
+
+    * Creamos los usuarios **Pepe y Arminda**.
 
 ![](imagen/21.PNG)
 
-    * Creamos los usuarios **Pepe y Arminda**.
+![](imagen/22.PNG)
+
+    * Creamos el archivo de VirtualHost para el sitio Pagos.
+
+![](imagen/24.PNG)
+
+
+    * Añadimos pagos.miempresa.com a /etc/hosts.
+
+![](imagen/26.PNG)
+
+    * Reiniciamos el servicio Apache2.
+
+![](imagen/27.PNG)
+
+
+    * Comprobamos que la pagína funciona.
 
 ![](imagen/28.PNG)
 
 
 
-    * Subcarpetas personales de empleados (dos o tres, con acceso limitado al usuario)
+## MySQL
+    * Instalar MySQL: sudo apt-get install mysql-server.
+
+![](imagen/30.PNG)
+
+
+![](imagen/31.PNG)
+
+
+![](imagen/32.PNG)
+
+
+## phpMyAdmin
+    * Descargar última versión (tar.gz) desde phpmyadmin.net.
+
+![](imagen/40.PNG)
+
+    * Cremos la carpeta phpmyadmin en /var/www.
+
+![](imagen/41.PNG)
+
+    * Descomprimir en subcarpeta de /var/www.
+
+![](imagen/42.PNG)
+
+    * Añadimos a /etc/hosts phpmyadmin.
+
+![](imagen/43.PNG)
+
+    * Creamos el VirtualHost de phpmyadmin.
+
+![](imagen/44.PNG)
+
+    * Activamos el fichero y reiniciamos el servicio apache2.
+
+![](imagen/45.PNG)
+
+    * Comprobar acceso.
+
+![](imagen/46.PNG)
