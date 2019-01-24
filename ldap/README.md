@@ -126,10 +126,16 @@
 
 ## Sitio virtual privado de usuario y otro de acceso para grupo
 
+
 ![](ldap2/10.PNG)
+
+## Accedemos a la página e iniciamos sesión con el Grupo
+**Por errores que no podemos solucionar, no inicia la sesión**
+
+![](ldap2/11.PNG)
 
 ## Accedemos a la página e iniciamos sesión con el usuario
 
-![](ldap2/11.PNG)
+![](ldap2/13.PNG)
 
 ![](ldap2/12.PNG)
