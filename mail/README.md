@@ -112,3 +112,6 @@ Configurar las cuentas según los parámetros especificados en el servidor. Envi
 ![](imagen/32.PNG)
 
 # //////////////////////////////////////////////////////////////////////////////
+
+
+# Configuración de hMailServer en Windows Server
